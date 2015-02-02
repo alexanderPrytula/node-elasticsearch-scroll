@@ -2,8 +2,8 @@
   "plugins": [ "nodeca" ],
   "rules": {
     "no-bitwise": 2,
-    "camelcase": 2,
     "consistent-return": 0,
+    "camelcase": 0,
     "curly": 2,
     "eqeqeq": 2,
     "guard-for-in": 2,
