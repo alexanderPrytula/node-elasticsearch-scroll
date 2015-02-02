@@ -1,0 +1,16 @@
+{
+  "name": "node-elasticsearch-scroll",
+  "version": "1.0.0",
+  "description": "Get all the results of an elasticsearch search via scan & scroll.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elasticsearch",
+    "scan",
+    "scroll"
+  ],
+  "author": "Mike Atkins",
+  "license": "MIT"
+}
