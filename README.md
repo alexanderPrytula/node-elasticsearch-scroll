@@ -20,7 +20,7 @@ If I start with an index `foo` with 20 documents of type `bar`,
 ```javascript
 var elasticsearch = require('elasticsearch'),
   client = new elasticsearch.Client(),
-  var identity = require('lodash.identity'),
+  identity = require('lodash.identity'),
   scrollToEnd = require('../index')(client);
 
 client.search({
