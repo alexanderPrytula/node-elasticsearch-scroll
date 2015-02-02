@@ -9,6 +9,7 @@ var elasticsearch = require('elasticsearch'),
 
 describe('When 20 things are indexed', function () {
   beforeEach(function () {
+    this.timeout(3000);
     return BPromise.map(range(0, 20), function (number) {
       return client.index({
         index: 'elasticsearch-scroll-test',
