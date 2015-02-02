@@ -1,16 +1,23 @@
 {
-  "name": "node-elasticsearch-scroll",
+  "name": "elasticsearch-scroll",
   "version": "1.0.0",
   "description": "Get all the results of an elasticsearch search via scan & scroll.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
   "keywords": [
     "elasticsearch",
     "scan",
     "scroll"
   ],
-  "author": "Mike Atkins",
-  "license": "MIT"
+  "author": "Lanetix",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.curry": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.13.0",
+    "eslint-plugin-nodeca": "^1.0.3"
+  }
 }
