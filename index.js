@@ -19,4 +19,6 @@ module.exports = function (client) {
       return results;
     }
   });
+
+  return scrollToEnd;
 };
