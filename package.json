@@ -1,9 +1,14 @@
 {
   "name": "elasticsearch-scroll",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Get all the results of an elasticsearch search via scan & scroll.",
   "main": "index.js",
   "repository": "https://github.com/lanetix/node-elasticsearch-scroll",
+  "engines": {
+    "iojs": ">=1.0 <1.6",
+    "node": ">=0.10 <0.13",
+    "npm": "^2"
+  },
   "scripts": {
     "lint": "eslint .",
     "test": "eslint . && mocha"
