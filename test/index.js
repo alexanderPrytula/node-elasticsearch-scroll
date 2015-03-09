@@ -7,9 +7,9 @@ var elasticsearch = require('elasticsearch'),
   identity = require('lodash.identity'),
   scrollToEnd = require('../index')(client);
 
-describe('When 20 things are indexed', function () {
+describe('When 20 things are indextimeouted', function () {
   beforeEach(function () {
-    this.timeout(4000);
+    this.timeout(20000);//travis-ci is slow.  Increasing to 20sec.
     return BPromise.map(range(0, 20), function (number) {
       return client.index({
         index: 'elasticsearch-scroll-test',
