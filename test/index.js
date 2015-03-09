@@ -7,9 +7,9 @@ var elasticsearch = require('elasticsearch'),
   identity = require('lodash.identity'),
   scrollToEnd = require('../index')(client);
 
-describe('When 20 things are indexed', function () {
+describe('When 20 things are indextimeouted', function () {
   beforeEach(function () {
-    this.timeout(4000);
+    this.timeout(10000);
     return BPromise.map(range(0, 20), function (number) {
       return client.index({
         index: 'elasticsearch-scroll-test',
@@ -17,8 +17,12 @@ describe('When 20 things are indexed', function () {
         id: number,
         body: { baz: 'bam' }
       });
-    })
-      .delay(1000); // Wait for everything to be indexed
+    }, { concurrency: 20 })
+      .then(function () {
+        return client.indices.refresh({
+          index: 'elasticsearch-scroll-test'
+        });
+      });
   });
 
   afterEach(function () {
