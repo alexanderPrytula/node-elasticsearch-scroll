@@ -15,12 +15,15 @@ module.exports = (client, {scrollTimeout = '30s'}) => {
       })
         .then(scrollToEnd(resultTransform, results));
     } else {
-      client.clearScroll({
-        scrollId: [res._scroll_id]
-      })
-        .then(() => {
-          return results;
-        });
+      return new Promise((resolve, reject) => {
+        client.clearScroll({
+          scrollId: [res._scroll_id]
+        })
+          .then(() => {
+            resolve(results);
+          })
+          .catch(reject);
+      });
     }
   });
 
