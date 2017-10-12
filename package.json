@@ -1,9 +1,9 @@
 {
-  "name": "elasticsearch-scroll",
-  "version": "1.1.1",
+  "name": "elasticsearch-scroll-full",
+  "version": "1.0.0",
   "description": "Get all the results of an elasticsearch search via scan & scroll.",
   "main": "index.js",
-  "repository": "https://github.com/lanetix/node-elasticsearch-scroll",
+  "repository": "https://github.com/alexanderPrytula/node-elasticsearch-scroll",
   "scripts": {
     "lint": "eslint .",
     "test": "eslint . && mocha"
@@ -19,7 +19,6 @@
     "lodash.curry": "^3.0.0"
   },
   "devDependencies": {
-    "bluebird": "^2.9.6",
     "elasticsearch": "^3.1.1",
     "eslint": "^0.13.0",
     "eslint-plugin-nodeca": "^1.0.3",
