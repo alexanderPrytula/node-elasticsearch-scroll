@@ -20,7 +20,7 @@ module.exports = (client, {scrollTimeout = '30s'}) => {
           scrollId: [res._scroll_id]
         })
           .then(() => {
-            resolve(results);
+            resolve({results, total: res.hits.total});
           })
           .catch(reject);
       });
