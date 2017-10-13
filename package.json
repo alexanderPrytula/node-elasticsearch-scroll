@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-scroll-full",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get all the results of an elasticsearch search via scan & scroll.",
   "main": "index.js",
   "repository": "https://github.com/alexanderPrytula/node-elasticsearch-scroll",
